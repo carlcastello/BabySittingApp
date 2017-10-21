@@ -1,51 +1,59 @@
 {% extends 'base.html' %}
 
-{% from "macros/forms.html" import render_input_with_label with context %}
-{#{%  %}#}
+{% from "macros/forms.html" import render_input_with_label, render_submit_button with context %}
 
 {% block content %}
     <div class="row margin-top-xl">
-        <div class="col-md-4">
-            <div class="row">
+        <div class="col-lg-8 card margin-auto">
+            <div class="row card-block padding-bottom-none">
+                <h3 class="margin-auto">Making life easier with a single click!</h3>
+            </div>
+            <div class="row card-block">
+                <div class="col-md-6">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.first_name) }}
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.last_name) }}
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.address) }}
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.contact_number) }}
                 </div>
             </div>
-            <div class="row">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.email) }}
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.password) }}
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="col-lg-12">
                     {{ render_input_with_label(form.confirm_password) }}
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-lg-12">
-{#                    <h1>Join Us Now!</h1>#}
+                    <div class="row">
+                        <div class="col-lg-12 padding-top-xs">
+                        </div>
+                        <div class="col-lg-12">
+                            {{ render_submit_button(class="btn-primary btn-raised  full-width btn-lg") }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

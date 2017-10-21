@@ -13,3 +13,11 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro render_submit_button(class="btn-primary", label="Submit", type="submit") %}
+    <button
+            type="{{ type }}"
+            class="btn {{ class }}">
+    {{ label }}
+    </button>
+{% endmacro %}
