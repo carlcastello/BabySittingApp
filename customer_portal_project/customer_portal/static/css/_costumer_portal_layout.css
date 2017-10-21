@@ -1,0 +1,22 @@
+body {
+    padding-top: 54px;
+}
+
+.login-drop-down {
+    min-width: 300px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255);
+}
+
+.login-drop-down .form-group {
+    margin-bottom: 10px;
+}
+
+
+@media(max-width:768px) {
+    .login-drop-down {
+        background-color: inherit;
+        color: #fff;
+    }
+}

@@ -1,0 +1,15 @@
+{% macro render_input_with_label(field, require=False) %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}" class="control-label ">{{ field.label }}:</label>
+        {{ field }}
+        <div class="help-block with-errors">
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    {{ error }}&nbsp;
+                {% endfor %}
+            {% elif field.help_text %}
+                {{ field.help_text }}
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

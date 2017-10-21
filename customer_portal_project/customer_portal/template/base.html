@@ -1,0 +1,81 @@
+{#{% load static %}#}
+
+<!DOCTYPE html>
+<html class="{% block page_class %}{% endblock %}" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Making Life Easier with one click at a time.">
+    <meta name="author" content="">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="{{ static('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ static('css/_costumer_portal_layout.css') }}" rel="stylesheet">
+    <link href="{{ static('css/layout/utils/_size.css') }}" rel="stylesheet">
+    <link href="{{ static('css/layout/utils/_colors.css') }}" rel="stylesheet">
+    <link href="{{ static( 'css/layout/utils/_styling.css') }}" rel="stylesheet">
+
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">onClick</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right margin-all-sm login-drop-down">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="email_input">Email address</label>
+                                        <input type="email" class="form-control" id="email_input"
+                                               placeholder="Email address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="password_input">Password</label>
+                                        <input type="password" class="form-control" id="password_input"
+                                               placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center padding-all-xs background-default">
+                                <span class="font-size-sm">Join us now! <a
+                                        href="{{ url('CustomerPortal:register') }}"><b>Sign Up</b></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+<script src="{{ static('js/jquery/jquery.min.js') }}"></script>
+<script src="{{ static('js/popper/popper.min.js') }}"></script>
+<script src="{{ static('js/bootstrap/bootstrap.min.js') }}"></script>
+{% block javascript %}
+{% endblock %}
+</body>
+</html>
