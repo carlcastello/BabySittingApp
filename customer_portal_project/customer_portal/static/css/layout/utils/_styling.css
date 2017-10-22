@@ -142,7 +142,7 @@
 }
 
 .padding-all-sm {
-    padding-top: 20px !important;
+    padding: 20px !important;
 
 }
 
@@ -253,3 +253,15 @@
 .padding-right-none {
     padding-right: 0px !important;
 }
+
+/* Border */
+
+.border-all-none {
+    border: 0;
+    border-radius: 0px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #cecece;
+}
+

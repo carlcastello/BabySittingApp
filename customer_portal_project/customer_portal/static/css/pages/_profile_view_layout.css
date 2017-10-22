@@ -1,0 +1,43 @@
+.profile-header .jumbotron-fluid{
+    height: 400px;
+}
+
+.profile-header-container {
+    width: 320px;
+    float: left;
+    margin-top: -300px;
+}
+
+.profile-body-container {
+    z-index: 2;
+    margin-top: -128px;
+    width: 790px;
+    float: right;
+}
+
+.profile-body {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.commenter-photo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.profile-header-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-header-item {
+    list-style: none;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    /*border-bottom: 1px solid #cecece;*/
+}
+
+
+
